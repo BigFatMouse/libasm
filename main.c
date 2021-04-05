@@ -3,6 +3,8 @@
 #include <unistd.h>
 #include <errno.h>
 
+extern int errno ;
+
 void ft_putchar(char *c);
 void hello_world(void);
 size_t	ft_strlen(char *str);
@@ -22,11 +24,15 @@ int main(void)
  //hello_world();
 //  printf("my_______%d\n", ft_strcmp(str, str2));
 //  printf("original_%d\n", strcmp(str, str2));
-char c = 'c';
-ft_write(1, "c", 1);
-write(1, "\n", 1);
-write(1, "c", 1);
-write(1, "\n", 1);
-//printf("%d %s\n", errno, perror(errno));
+// char c = 'c';
+char *s = NULL;
+ft_write(1, s, 4);
+printf("%d %s\n", errno, strerror(errno));
+
+//write(1, &c, 1);
+// write(1, "\n", 1);
+// write(-1, "000", 5);
+// printf("%d %s\n", errno, strerror(errno));
+
 return (0);
 }
