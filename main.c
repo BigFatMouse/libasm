@@ -9,9 +9,9 @@ int ft_strcmp(const char *s1, const char *s2);
 
 int main(void)
 {
- char *str = "0";
+ char *str = "123";
  char dst[20];
- char *str2 = "600";
+ char *str2 = "12";
  //int i = ft_strlen(str);
  //printf("%s\n", ft_strcpy(dst, str));
  //printf("%d\n", i);
