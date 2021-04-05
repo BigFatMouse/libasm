@@ -4,10 +4,11 @@ section	.text
 
 _ft_strcpy:
 
+mov rax, 0								; обнуляем счетчик
+cmp rdi, 0								; проверяем первый аргумент (dst)
+je .return
 cmp rsi, 0								; проверяем второй аргумент (src)
 je .return								; Jump if equal - возвращаем, если ноль
-
-mov rax, 0								; обнуляем счетчик
 
 .loop:									; цикл								
 mov dl, byte[rsi + rax]					; копируем из src в dl 
