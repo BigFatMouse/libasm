@@ -9,8 +9,8 @@ mov rcx, 0
 mov rdx, 0							; обнуляем все
 
 .loop:
-mov al, [rdi + rdx]					; копируем символ первой строки в dl 
-mov cl, [rsi + rdx]					; копируем символ второй строки в cl
+mov al, byte[rdi + rdx]				; копируем символ первой строки в dl 
+mov cl, byte[rsi + rdx]				; копируем символ второй строки в cl
 inc	rdx								; счетчик ++
 cmp al, 0
 je .return							; выход, если первая строка закончилась

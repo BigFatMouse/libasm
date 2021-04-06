@@ -1,11 +1,11 @@
-global	_ft_write
+global	_ft_read
 extern ___error
 
 section .text
 
-_ft_write:
+_ft_read:
 
-mov rax, 0x2000004						; код системного вызова write
+mov rax, 0x2000003						; код системного вызова read
 syscall									; системный вызов
 jc .error								; Jump if carry (CF = 1) Флаг переноса, содержит крайний левый (старший) бит после вычислений.
 ret
